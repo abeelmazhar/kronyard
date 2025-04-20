@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Explore = () => {
+const profile = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Eexplore</Text>
+      <Text>profile</Text>
     </View>
   )
 }
 
-export default Explore
+export default profile
