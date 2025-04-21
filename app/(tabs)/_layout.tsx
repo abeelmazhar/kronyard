@@ -2,7 +2,8 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import Feather from '@expo/vector-icons/Feather';
-
+import AntDesign from '@expo/vector-icons/AntDesign';
+import Entypo from '@expo/vector-icons/Entypo';
 export default function TabLayout() {
 //   const colorScheme = useColorScheme();
 
@@ -28,21 +29,14 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
-        <Tabs.Screen
-         name="products"
-         options={{
-           title: 'Products',
-       
-           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-         }}
-       />
-      <Tabs.Screen
-        name="catalogue"
+       <Tabs.Screen
+        name="products"
         options={{
-          title: 'Catalogue',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Products',
+          tabBarIcon: ({ color }) => <Entypo name="grid" size={24} color={color} />,
         }}
       />
+
       <Tabs.Screen
         name="profile"
         options={{
@@ -55,7 +49,13 @@ export default function TabLayout() {
         options={{
           title: 'Menu',
           tabBarIcon:()=><Feather name="menu" size={24} color="black" />
-          // tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="cart"
+        options={{
+          title: 'Cart',
+          tabBarIcon: ({ color }) => <AntDesign name="shoppingcart" size={24} color="black" />,
         }}
       />
     </Tabs>
