@@ -13,7 +13,7 @@ import HeroSection from "@/components/HeroSection";
 const Home = () => {
   return (
     <View style={className`flex-1 items-center justify-center mt-10`}>
-      <HeroSection />
+      {/* <HeroSection /> */}
 
       <View style={className`bg-green-500  w-full h-1/3`}>
         <Text style={className`text-white text-2xl`}>Products</Text>
