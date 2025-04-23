@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import React, { useState } from "react";
 import className from "twrnc";
 import SearchBar from "@/components/SearchBar";
@@ -6,6 +6,8 @@ import CatagorySection from "@/components/CatagorySection";
 import ProductViewSection from "@/components/ProductViewSection";
 import { useNavigation } from "@react-navigation/native";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import ProductDetailCard from "@/components/ProductDetailCard";
+
 const Products = () => {
   const navigation = useNavigation();
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(
@@ -42,11 +44,7 @@ const Products = () => {
         <ProductViewSection setSelectedProduct={setSelectedProduct} />
       )}
 
-      {selectedProduct && (
-        <View style={className`bg-green-300 h-auto w-full`}>
-          <Text>abeel</Text>
-        </View>
-      )}
+      {selectedProduct && <ProductDetailCard />}
     </View>
   );
 };
