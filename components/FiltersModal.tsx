@@ -1,14 +1,8 @@
-import {
-  View,
-  Text,
-  Modal,
-  ScrollView,
-  TouchableOpacity,
-  Pressable,
-} from "react-native";
-import React, { useState } from "react";
+import { View, Text, Modal, TouchableOpacity } from "react-native";
+import React from "react";
 import className from "twrnc";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import DropDownFiltersSection from "./DropDownFiltersSection";
+import PriceRnageFilter from "./PriceRnageFilter";
 const FiltersModal = ({
   filterModalVisible,
   setFilterModalVisible,
@@ -16,50 +10,6 @@ const FiltersModal = ({
   filterModalVisible: boolean;
   setFilterModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
-  const [dropdowns, setDropdowns] = useState({
-    color: false,
-    brand: false,
-    rating: false,
-  });
-
-  const [selectedFilters, setSelectedFilters] = useState<{
-    color: string[];
-    brand: string[];
-    rating: string[];
-  }>({
-    color: [],
-    brand: [],
-    rating: [],
-  });
-
-  const toggleDropdown = (key: keyof typeof dropdowns) => {
-    setDropdowns((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
-
-  const toggleCheckbox = (
-    category: keyof typeof selectedFilters,
-    value: string
-  ) => {
-    setSelectedFilters((prev) => {
-      const exists = prev[category].includes(value);
-      return {
-        ...prev,
-        [category]: exists
-          ? prev[category].filter((item) => item !== value)
-          : [...prev[category], value],
-      };
-    });
-  };
-
-  const FILTER_OPTIONS = {
-    color: ["Red", "Blue", "Green", "Yellow", "Black"],
-    brand: ["Nike", "Adidas", "Puma", "Reebok"],
-    rating: ["1 Star", "2 Stars", "3 Stars", "4 Stars", "5 Stars"],
-  };
-
   return (
     <Modal
       animationType="slide"
@@ -80,68 +30,15 @@ const FiltersModal = ({
             <View />
           </View>
 
-          <ScrollView contentContainerStyle={className`gap-4`}>
-            {Object.keys(FILTER_OPTIONS).map((key) => {
-              const category = key as keyof typeof FILTER_OPTIONS;
+          {/* PRICE RANGE FILTER SECTION */}
+          <PriceRnageFilter />
 
-              return (
-                <View key={category}>
-                  <Pressable
-                    onPress={() => toggleDropdown(category)}
-                    style={className`p-4 border border-gray-200 rounded-lg flex-row justify-between items-center`}
-                  >
-                    <Text style={className`text-lg capitalize`}>
-                      {category}
-                    </Text>
-                    <Text style={className`text-xl`}>
-                      {dropdowns[category] ? (
-                        <MaterialIcons
-                          name="keyboard-arrow-up"
-                          size={24}
-                          color="black"
-                        />
-                      ) : (
-                        <MaterialIcons
-                          name="keyboard-arrow-down"
-                          size={24}
-                          color="black"
-                        />
-                      )}
-                    </Text>
-                  </Pressable>
-                  {dropdowns[category] &&
-                    FILTER_OPTIONS[category].map((option) => {
-                      const isChecked =
-                        selectedFilters[category].includes(option);
-                      return (
-                        <TouchableOpacity
-                          key={option}
-                          onPress={() => toggleCheckbox(category, option)}
-                          style={className`flex-row items-center px-4 py-2`}
-                        >
-                          <View
-                            style={className`w-5 h-5 rounded border border-gray-400 items-center justify-center mr-2 ${
-                              isChecked ? "bg-blue-500" : "bg-white"
-                            }`}
-                          >
-                            {isChecked && (
-                              <Text style={className`text-white text-xs`}>
-                                ✓
-                              </Text>
-                            )}
-                          </View>
-                          <Text>{option}</Text>
-                        </TouchableOpacity>
-                      );
-                    })}
-                </View>
-              );
-            })}
-          </ScrollView>
+          {/* DROPDOWN FILTER OPTION COLORS BRAND RATING */}
+          <DropDownFiltersSection />
 
+          {/* SUBMIT BUTTON */}
           <TouchableOpacity
             onPress={() => {
-              console.log("Selected Filters:", selectedFilters);
               setFilterModalVisible(false);
             }}
             style={className`mt-6 bg-red-500 py-3 rounded-xl`}
