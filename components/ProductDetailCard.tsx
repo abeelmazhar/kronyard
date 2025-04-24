@@ -1,4 +1,12 @@
-import { View, Text, ScrollView, Image, TouchableOpacity, Modal, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  Modal,
+  Pressable,
+} from "react-native";
 import React, { useState } from "react";
 import className from "twrnc";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
@@ -15,7 +23,8 @@ const ProductDetailCard = () => {
 
   return (
     <>
-    <FiltersSection/>
+      {/* FILTERS SECTION */}
+      <FiltersSection />
       <ScrollView style={className`w-full px-2 mb-4`}>
         {dummyProducts.map((product) => (
           <View key={product.id} style={className`w-full h-auto gap-2 mb-8`}>
@@ -49,7 +58,10 @@ const ProductDetailCard = () => {
         ))}
       </ScrollView>
       {/* Dropdown Menu Modal */}
-      <DropDownOptionsModal dropdownVisible={dropdownVisible}  setDropdownVisible={setDropdownVisible}/>
+      <DropDownOptionsModal
+        dropdownVisible={dropdownVisible}
+        setDropdownVisible={setDropdownVisible}
+      />
     </>
   );
 };
