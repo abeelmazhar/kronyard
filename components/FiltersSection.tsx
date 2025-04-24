@@ -12,13 +12,20 @@ import className from "twrnc";
 import FiltersButton from "./FiltersButton";
 import FiltersModal from "./FiltersModal";
 
-const FiltersSection = () => {
+const FiltersSection = ({
+  setIsGridViewEnabled,
+}: {
+  setIsGridViewEnabled: any;
+}) => {
   const [filterModalVisible, setFilterModalVisible] = useState(false);
 
   return (
     <>
       {/* Main Filter Buttons */}
-      <FiltersButton setFilterModalVisible={setFilterModalVisible} />
+      <FiltersButton
+        setFilterModalVisible={setFilterModalVisible}
+        setIsGridViewEnabled={setIsGridViewEnabled}
+      />
 
       {/* Filter Modal */}
       <FiltersModal

@@ -7,7 +7,6 @@ import ProductViewSection from "@/components/ProductViewSection";
 import { useNavigation } from "@react-navigation/native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import ProductDetailCard from "@/components/ProductDetailCard";
-
 const Products = () => {
   const navigation = useNavigation();
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(
@@ -28,8 +27,8 @@ const Products = () => {
         <TouchableOpacity onPress={handleGoBack}>
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
-        <Text style={className`font-bold text-black text-lg`}>Produse</Text>
-        <SearchBar />
+        <Text style={className`font-bold text-black text-lg`}>Motor</Text>
+        <SearchBar selectedCategoryId={selectedCategoryId} />
       </View>
 
       {/* Ctagory section */}
