@@ -20,7 +20,7 @@ const DropDownSection = () => {
 
   return (
     <View
-      style={className`gap-3 flex items-center justify-center w-full h-1/3  mx-2 bg-black/90 px-2 `}
+      style={className` z-20 gap-3 flex items-center justify-center w-full h-1/3  mx-2 bg-black/90 px-2 `}
     >
       <CustomDropdown
         items={dropdownData1}

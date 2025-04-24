@@ -18,21 +18,21 @@ const CustomDropdown = ({
   const [dropdownItems, setDropdownItems] = useState(items);
 
   return (
-    <View style={{zIndex: 100}}>
-    <DropDownPicker
-      open={open}
-      value={value}
-      items={dropdownItems}
-      setOpen={setOpen}
-      setValue={(val) => {
-        setValue(val);
-        onChangeValue?.(val);
-      }}
-      setItems={setDropdownItems}
-      style={className`  bg-white border border-gray-300  `}
-      dropDownContainerStyle={className`bg-white border border-gray-300  `}
-      placeholder={placeholder || "Select an option"}
-    />
+    <View style={{ zIndex: 100 }}>
+      <DropDownPicker
+        open={open}
+        value={value}
+        items={dropdownItems}
+        setOpen={setOpen}
+        setValue={(val) => {
+          setValue(val);
+          onChangeValue?.(val);
+        }}
+        setItems={setDropdownItems}
+        style={className`  bg-white border border-gray-300  `}
+        dropDownContainerStyle={className`bg-white border border-gray-300  `}
+        placeholder={placeholder || "Select an option"}
+      />
     </View>
   );
 };
