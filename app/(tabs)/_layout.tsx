@@ -1,11 +1,11 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import Feather from '@expo/vector-icons/Feather';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Entypo from '@expo/vector-icons/Entypo';
+import { Tabs } from "expo-router";
+import React from "react";
+import { IconSymbol } from "@/components/ui/IconSymbol";
+import Feather from "@expo/vector-icons/Feather";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from "@expo/vector-icons/Entypo";
 export default function TabLayout() {
-//   const colorScheme = useColorScheme();
+  //   const colorScheme = useColorScheme();
 
   return (
     <Tabs
@@ -21,41 +21,59 @@ export default function TabLayout() {
         //   },
         //   default: {},
         // }),
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Home",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="house.fill" color={color} />
+          ),
         }}
       />
-       <Tabs.Screen
+      <Tabs.Screen
         name="products"
         options={{
-          title: 'Products',
-          tabBarIcon: ({ color }) => <Entypo name="grid" size={24} color={color} />,
+          title: "Products",
+          tabBarIcon: ({ color }) => (
+            <Entypo name="grid" size={24} color={color} />
+          ),
         }}
       />
 
       <Tabs.Screen
         name="profile"
         options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="person.fill" color={color} />
+          ),
         }}
       />
-       <Tabs.Screen
+      <Tabs.Screen
         name="menu"
         options={{
-          title: 'Menu',
-          tabBarIcon:()=><Feather name="menu" size={24} color="black" />
+          title: "Menu",
+          tabBarIcon: () => <Feather name="menu" size={24} color="black" />,
         }}
       />
       <Tabs.Screen
         name="cart"
         options={{
-          title: 'Cart',
-          tabBarIcon: ({ color }) => <AntDesign name="shoppingcart" size={24} color="black" />,
+          title: "Cart",
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="shoppingcart" size={24} color="black" />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="login"
+        options={{
+          title: "Login",
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="shoppingcart" size={24} color="black" />
+          ),
         }}
       />
     </Tabs>
