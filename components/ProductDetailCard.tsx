@@ -4,7 +4,7 @@ import className from "twrnc";
 import DropDownOptionsModal from "./DropDownOptionsModal";
 import FiltersSection from "./FiltersSection";
 import ProductDetails from "./ProductDetails";
-
+import { useRouter } from "expo-router";
 const ProductDetailCard = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isGridViewEnabled, setIsGridViewEnabled] = useState(false);
@@ -12,7 +12,7 @@ const ProductDetailCard = () => {
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
-
+  const router = useRouter();
   return (
     <>
       {/* FILTERS SECTION */}
@@ -42,7 +42,7 @@ const ProductDetailCard = () => {
       >
         <View style={className`flex-1 bg-black/50 justify-end items-center`}>
           <View
-            style={className`bg-white w-11/11.5 h-11/15 rounded-xl p-4 mb-4 gap-3`}
+            style={className`bg-white w-11/11.2 h-62 rounded-xl p-2 mb-4 gap-1`}
           >
             <View style={className`flex-row justify-between items-center `}>
               <Pressable onPress={() => setIsDetailsModalOpen(false)}>
@@ -78,12 +78,15 @@ const ProductDetailCard = () => {
                 </View>
               </View>
             </View>
-            <ScrollView style={className` px-2 mb-4`}>
-              <ProductDetails
-                toggleDropdown={toggleDropdown}
-                isGridViewEnabled={isGridViewEnabled}
-              />
-            </ScrollView>
+            <Pressable
+              style={className`bg-red-500 w-full h-11  items-center justify-center rounded-xl`}
+              onPress={() => {
+                setIsDetailsModalOpen(false);
+                router.push("/profile");
+              }}
+            >
+              <Text style={className`text-white`}>Add Riview</Text>
+            </Pressable>
           </View>
         </View>
       </Modal>
