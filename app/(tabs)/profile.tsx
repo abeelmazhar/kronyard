@@ -78,6 +78,13 @@ const Profile = () => {
       >
         <Text style={className`text-white font-bold`}>Submit Review</Text>
       </Pressable>
+      <Pressable
+        onPress={() => {
+          router.push("/login");
+        }}
+      >
+        <Text style={className`text-red-300 text-xl`}>Login</Text>
+      </Pressable>
     </View>
   );
 };
