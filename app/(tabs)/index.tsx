@@ -11,8 +11,8 @@ const Home = () => {
     <View style={className` items-center justify-center `}>
       <HeroSection />
       <DropDownSection />
-      {/* <ProductSection />
-      <BottomSection /> */}
+      <ProductSection />
+      <BottomSection />
     </View>
   );
 };
