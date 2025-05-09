@@ -8,7 +8,7 @@ import BottomSection from "@/components/BottomSection";
 
 const Home = () => {
   return (
-    <View style={className` items-center justify-center `}>
+    <View style={className` i justify-center `}>
       <HeroSection />
       <DropDownSection />
       <ProductSection />
