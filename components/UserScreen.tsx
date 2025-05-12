@@ -16,7 +16,7 @@ const UserScreen = () => {
   console.log("data", data);
   useEffect(() => {
     dispatch(fetchUsers());
-  }, [dispatch]);
+  }, []);
 
   if (loading)
     return (
