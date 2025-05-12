@@ -1,11 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
 import className from "twrnc";
+import { Provider } from "react-redux";
+import store from "../../store/store";
+import UserScreen from "@/components/UserScreen";
 const login = () => {
   return (
-    <View style={className`flex-1 items-center justify-center`}>
-      <Text>login</Text>
-    </View>
+    <Provider store={store}>
+      <UserScreen />
+    </Provider>
   );
 };
 
