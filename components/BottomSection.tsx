@@ -9,10 +9,10 @@ const BottomSection = () => {
     <View
       style={className`bg-black/90 w-full h-1/6 flex items-center justify-around flex-row`}
     >
-      {/* <View style={className`flex items-center justify- flex-col `}>
+      <View style={className`flex items-center justify- flex-col `}>
         <Entypo name="box" size={54} color="red" />
         <Text style={className`text-white text-lg`}>LIVRARE</Text>
-      </View> */}
+      </View>
       <View style={className`flex items-center justify-center flex-col `}>
         <FontAwesome6 name="tent-arrow-turn-left" size={54} color="red" />
         <Text style={className`text-white text-lg`}>RETURN</Text>
