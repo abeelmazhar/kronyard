@@ -17,14 +17,14 @@ const BottomSection = () => {
         <FontAwesome6 name="tent-arrow-turn-left" size={54} color="red" />
         <Text style={className`text-white text-lg`}>RETURN</Text>
       </View>
-      {/* <View style={className`flex items-center justify-center flex-col `}>
+      <View style={className`flex items-center justify-center flex-col `}>
         <MaterialCommunityIcons
           name="google-circles-communities"
           size={54}
           color="red"
         />
         <Text style={className`text-white text-lg`}>PIESE</Text>
-      </View> */}
+      </View>
     </View>
   );
 };
