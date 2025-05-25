@@ -7,7 +7,10 @@ export const submitForm = createAsyncThunk(
     try {
       const response = await axios.post(
         "https://reqres.in/api/users",
-        formData
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
       );
       return response.data;
     } catch (error) {
