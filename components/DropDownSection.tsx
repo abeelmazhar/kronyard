@@ -22,13 +22,13 @@ const DropDownSection = () => {
     <View
       style={className` gap-3 flex items-center justify-center w-full h-1/3  mx-2 bg-black/90 px-2 `}
     >
-      <CustomDropdown
+      {/* <CustomDropdown
         items={dropdownData1}
         placeholder="Select category"
         onChangeValue={(val) => console.log("Dropdown 1 value:", val)}
         zIndex={3000}
         zIndexInverse={1000}
-      />
+      /> */}
       <CustomDropdown
         items={dropdownData2}
         placeholder="Select fruit"
