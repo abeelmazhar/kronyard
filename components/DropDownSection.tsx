@@ -3,20 +3,20 @@ import React from "react";
 import CustomDropdown from "./CustomDropdown";
 import className from "twrnc";
 const DropDownSection = () => {
-  // const dropdownData1 = [
-  //   { label: "Option 1", value: "option1" },
-  //   { label: "Option 2", value: "option2" },
-  // ];
+  const dropdownData1 = [
+    { label: "Option 1", value: "option1" },
+    { label: "Option 2", value: "option2" },
+  ];
 
-  // const dropdownData2 = [
-  //   { label: "Apple", value: "apple" },
-  //   { label: "Banana", value: "banana" },
-  // ];
+  const dropdownData2 = [
+    { label: "Apple", value: "apple" },
+    { label: "Banana", value: "banana" },
+  ];
 
-  // const dropdownData3 = [
-  //   { label: "Red", value: "red" },
-  //   { label: "Blue", value: "blue" },
-  // ];
+  const dropdownData3 = [
+    { label: "Red", value: "red" },
+    { label: "Blue", value: "blue" },
+  ];
 
   return (
     <View
