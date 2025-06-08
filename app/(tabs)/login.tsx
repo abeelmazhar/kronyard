@@ -8,8 +8,8 @@ import FormScreen from "../../components/FormScreen";
 const login = () => {
   return (
     <Provider store={store}>
-      <UserScreen />
-      <FormScreen />
+      {/* <UserScreen />
+      <FormScreen /> */}
     </Provider>
   );
 };
