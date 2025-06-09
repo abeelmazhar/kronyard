@@ -9,7 +9,7 @@ const login = () => {
   return (
     <Provider store={store}>
       <UserScreen />
-      <FormScreen />
+      {/* <FormScreen /> */}
     </Provider>
   );
 };
