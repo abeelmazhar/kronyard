@@ -13,10 +13,10 @@ const DropDownSection = () => {
     { label: "Banana", value: "banana" },
   ];
 
-  // const dropdownData3 = [
-  //   { label: "Red", value: "red" },
-  //   { label: "Blue", value: "blue" },
-  // ];
+  const dropdownData3 = [
+    { label: "Red", value: "red" },
+    { label: "Blue", value: "blue" },
+  ];
 
   return (
     <View
