@@ -3,11 +3,11 @@ import { Image, Text, TextInput, View } from "react-native";
 import className from "twrnc";
 import SearchBar from "./SearchBar";
 
-const imageUrls = [
-  "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600",
-  "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600",
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600",
-];
+// const imageUrls = [
+//   "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600",
+//   "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600",
+//   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600",
+// ];
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
 
