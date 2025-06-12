@@ -31,14 +31,14 @@ const HeroSection = () => {
         <View
           style={className`absolute bottom-5 left-0 right-0 flex-row justify-center`}
         >
-          {imageUrls.map((_, i) => (
+          {/* {imageUrls.map((_, i) => (
             <View
               key={i}
               style={className`w-3 h-3 mx-1 rounded-full ${
                 index === i ? "bg-red-500" : "bg-white"
               }`}
             />
-          ))}
+          ))} */}
         </View>
       </View>
 
