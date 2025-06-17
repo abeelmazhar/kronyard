@@ -3,21 +3,21 @@ import React, { useState } from "react";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import className from "twrnc";
 
-const FiltersButton = ({
-  setFilterModalVisible,
-  setIsGridViewEnabled,
-}: {
-  setFilterModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  setIsGridViewEnabled: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
-  const [showSortPopup, setShowSortPopup] = useState(false);
+// const FiltersButton = ({
+//   setFilterModalVisible,
+//   setIsGridViewEnabled,
+// }: {
+//   setFilterModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
+//   setIsGridViewEnabled: React.Dispatch<React.SetStateAction<boolean>>;
+// }) => {
+//   const [showSortPopup, setShowSortPopup] = useState(false);
 
-  const handleSort = () => {
-    setShowSortPopup(true);
-    setTimeout(() => {
-      setShowSortPopup(false);
-    }, 2000); // show for 2 seconds
-  };
+//   const handleSort = () => {
+//     setShowSortPopup(true);
+//     setTimeout(() => {
+//       setShowSortPopup(false);
+//     }, 2000); // show for 2 seconds
+//   };
 
   return (
     <>
