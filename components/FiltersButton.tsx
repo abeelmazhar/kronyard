@@ -16,7 +16,7 @@ const FiltersButton = ({
     setShowSortPopup(true);
     setTimeout(() => {
       setShowSortPopup(false);
-    }, 2000); // show for 2 seconds
+    }, 2000);
   };
 
   return (
