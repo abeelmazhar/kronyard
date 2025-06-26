@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <View style={className` items-center justify-center `}>
       <HeroSection />
-      <DropDownSection />
-      <ProductSection />
+      {/* <DropDownSection />
+      <ProductSection /> */}
       <BottomSection />
     </View>
   );
