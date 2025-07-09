@@ -12,7 +12,7 @@ const Home = () => {
       <HeroSection />
       <DropDownSection />
       <ProductSection />
-      {/* <BottomSection /> */}
+      <BottomSection />
     </View>
   );
 };
