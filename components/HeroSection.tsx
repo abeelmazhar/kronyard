@@ -23,11 +23,11 @@ const HeroSection = () => {
       {/* Auto swap image section */}
 
       <View style={className`relative w-full h-full`}>
-        {/* <Image
+        <Image
           source={{ uri: imageUrls[index] }}
           style={className`w-full h-full opacity-70`}
           resizeMode="cover"
-        /> */}
+        />
         <View
           style={className`absolute bottom-5 left-0 right-0 flex-row justify-center`}
         >
